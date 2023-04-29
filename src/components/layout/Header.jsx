@@ -5,7 +5,7 @@ import slider2 from "../../assets/images/bg-slide01.jpg";
 import slider3 from "../../assets/images/bg-slide02.jpg";
 import slider4 from "../../assets/images/bg-slide04.jpg";
 import Slider from "react-slick";
-import HamburgerIcon from "@/assets/icons/hamburgerIcon";
+import HamburgerIcon from "@/assets/icons/HamburgerIcon";
 import { SiGooglemessages } from "react-icons/si";
 import { useState } from "react";
 

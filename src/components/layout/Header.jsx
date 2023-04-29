@@ -71,7 +71,7 @@ const Header = () => {
         <>
           <div className="absolute w-[280px] h-[100vh] bg-[#617A55]  top-0 z-[20]">
             <div
-              className="absolute top-7 right-6"
+              className="absolute top-6 right-6"
               onClick={() => setIsMobileMenu(false)}
             >
               <CloseIcon />

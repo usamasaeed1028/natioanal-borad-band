@@ -13,7 +13,7 @@ const DATA = [
     text: (
       <div className="text-[40px] md:text-[50px] md:pl-[80px] md:pt-[100px] w-[300px]  md:w-[600px]  text-left absolute z-[11] text-[#FFF8D6] text-glow">
         {" "}
-        BORADBAND <span className="font-extrabold"> FOR PAKISTANIS </span> BY
+        BROADBAND <span className="font-extrabold"> FOR PAKISTANIS </span> BY
         <span className="font-extrabold"> PAKISTANIS </span>{" "}
       </div>
     ),

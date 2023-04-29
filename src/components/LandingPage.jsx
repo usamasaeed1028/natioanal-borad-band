@@ -64,7 +64,7 @@ const LandingPage = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1080,
         settings: {
           dots: false,
          
@@ -90,7 +90,7 @@ const LandingPage = () => {
                   src={data.img}
                   alt="Background image"
                   quality={100}
-                  className="w-full  h-[92vh] md:h-[79vh] md:rounded-[48px] object-cover"
+                  className="w-full  h-[92vh] md:h-[85vh] lg:h-[79vh] md:rounded-[48px] object-cover"
                 />
               </div>
             </div>

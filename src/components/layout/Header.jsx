@@ -4,12 +4,13 @@ import HamburgerIcon from "@/assets/icons/HamburgerIcon";
 import { useState } from "react";
 import CloseIcon from "@/assets/icons/CloseIcon";
 import LandingPage from "../LandingPage";
+import { CSSTransition } from "react-transition-group";
 
 const Header = () => {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
 
   return (
-    <div className="grad  min-h-screen">
+    <div className="grad h-[100vh]">
       <div
         className={` flex justify-between items-center px-[30px] w-full bg-[#61 7A55]  xl:px-[60px] py-[10px]  border-b-[0.5px]`}
       >
@@ -45,14 +46,13 @@ const Header = () => {
           <HamburgerIcon />
         </div>
       </div>
-      {/* mobile header */}
-      {isMobileMenu && (
+      <CSSTransition
+        in={isMobileMenu}
+        timeout={300}
+        classNames="sidebar"
+        unmountOnExit
+      >
         <>
-          {" "}
-          <div
-            className="fixed inset-0 z-10 bg-black bg-opacity-30 brightness-50"
-            onClick={() => setIsMobileMenu(false)}
-          ></div>
           <div className="absolute w-[280px] h-[100vh] bg-[#617A55]  top-0 z-[20]">
             <div
               className="absolute top-7 right-6"
@@ -84,8 +84,13 @@ const Header = () => {
               </button>
             </ul>
           </div>
+          <div
+            className="fixed inset-0 z-10 bg-black bg-opacity-30 brightness-50"
+            onClick={() => setIsMobileMenu(false)}
+          ></div>
         </>
-      )}
+      </CSSTransition>
+
       <LandingPage />
     </div>
   );

@@ -14,6 +14,21 @@ body {
 .grad {
   background: linear-gradient(to right, #617a55, #a4d0a4);
 }
+/* Sidebar animation styles */
+.sidebar-enter {
+  transform: translateX(-100%);
+}
+.sidebar-enter-active {
+  transform: translateX(0%);
+  transition: transform 300ms ease-in-out;
+}
+.sidebar-exit {
+  transform: translateX(0%);
+}
+.sidebar-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+}
 
 .slick-dots {
   bottom: -30px !important; 

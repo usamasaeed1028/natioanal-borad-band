@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "../../assets/images/logo.png";
 import HamburgerIcon from "@/assets/icons/HamburgerIcon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CloseIcon from "@/assets/icons/CloseIcon";
 import LandingPage from "../LandingPage";
 import { CSSTransition } from "react-transition-group";
@@ -9,8 +9,24 @@ import { CSSTransition } from "react-transition-group";
 const Header = () => {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
 
+  useEffect(() => {
+    console.log('in Dashboard COntainer')
+    const handleResize = () => {
+      const isMobile = window.innerWidth > 1024
+      if (isMobile && setIsMobileMenu) {
+        setIsMobileMenu(false)
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [isMobileMenu])
+
   return (
-    <div className="grad h-[100vh]">
+    <div className="grad h-[100vh] overflow-hidden">
       <div
         className={` flex justify-between items-center px-[30px] w-full bg-[#61 7A55]  xl:px-[60px] py-[10px]  border-b-[0.5px]`}
       >

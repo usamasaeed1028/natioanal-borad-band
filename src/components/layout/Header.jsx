@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <div className="grad h-[100vh] overflow-hidden">
       <div
-        className={` flex justify-between items-center px-[30px] w-full bg-[#61 7A55]  xl:px-[60px] py-[10px]  border-b-[0.5px]`}
+        className={` flex justify-between items-center px-[10px] md:px-[30px] w-full bg-[#61 7A55]  xl:px-[60px] py-[10px]  border-b-[0.5px]`}
       >
         <Image
           src={logo}
